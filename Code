@@ -1,1 +1,54 @@
+1. Basic LED Blink — Arduino UNO
+     // Basic LED Blink
+CODE:
+void setup() {
+  pinMode(13, OUTPUT);
+}
 
+void loop() {
+  digitalWrite(13, HIGH);  // LED ON
+  delay(1000);
+
+  digitalWrite(13, LOW);   // LED OFF
+  delay(1000);
+}
+
+2. 2-Bit binary counter - Arduino UNO 
+    using two LED'S to represent the two binary bits
+   • 00 - 0
+   • 01 - 1
+   • 10 - 2
+   • 11 - 3
+CODE:
+// 2-Bit Binary Counter
+
+int LED1 = 8;   // LSB
+int LED2 = 9;   // MSB
+
+void setup() {
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+}
+
+void loop() {
+
+  // 00
+  digitalWrite(LED1, LOW);
+  digitalWrite(LED2, LOW);
+  delay(1000);
+
+  // 01
+  digitalWrite(LED1, HIGH);
+  digitalWrite(LED2, LOW);
+  delay(1000);
+
+  // 10
+  digitalWrite(LED1, LOW);
+  digitalWrite(LED2, HIGH);
+  delay(1000);
+
+  // 11
+  digitalWrite(LED1, HIGH);
+  digitalWrite(LED2, HIGH);
+  delay(1000);
+}
